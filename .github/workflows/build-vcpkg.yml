@@ -1,24 +1,22 @@
 name: Build with vcpkg
 
 on:
-  
-on:
-  workflow_dispatch
+  workflow_dispatch:
   push:
     branches:
       - master
       - v*
-
     tags:
       - v*
-
     paths:
       - .github/workflows/**
       - cmake/**
       - src/**
       - CMakeLists.txt
-
   pull_request:
+    branches:
+      - master
+      - v*
     paths:
       - .github/workflows/**
       - cmake/**
